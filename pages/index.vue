@@ -17,7 +17,7 @@ let companies=[
 <template>
   <main>
     <Topbar show-phone="true"></Topbar>
-    <Header src="/src/assets/heading.jpg" text="Gupta Hospital" isHome="true"></Header>   
+    <Header src="/src/assets/heading.jpg" text="Gupta Hospital" isHome='true'></Header>   
 
     <div class="home__highlights">
 
