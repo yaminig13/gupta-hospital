@@ -1,0 +1,18 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: unset;
+  transition: 0.4s;
+}
+
+.large {
+  font-size: large;
+}
