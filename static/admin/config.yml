@@ -27,3 +27,24 @@ collections:
           required: true
         }
       - { label: 'Image', name: 'cover', widget: 'image', required: true, allow_multiple: false }
+  - name: 'contact'
+    label: 'Contact Info'
+    folder: 'content/contact'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'contact/{{slug}}'
+    fields:
+      - {
+          label: 'Whatsapp Number',
+          name: 'wa_no',
+          widget: 'string',
+          required: true
+        }
+      - {
+          label: 'Phone Number - Gynaec',
+          name: 'ph_gy',
+          widget: 'list',
+          required: true,
+          field: {label: Phone number}
+        }  
