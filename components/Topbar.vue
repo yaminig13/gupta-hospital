@@ -12,7 +12,7 @@ defineProps({
         <div class="top-bar__wrapper">
             <div class="top-bar__left"  v-if="showPhone">
                 <i class="fa-brands fa-whatsapp"></i>
-                <span> +91 9876543210 </span>
+                <!-- <span> {{ contact.wa_no }} </span> -->
                 <i class="fa-solid fa-phone-flip"></i>
                 <span> 0265 12345 </span>
             </div>
@@ -40,6 +40,18 @@ defineProps({
     </div>
 </template>
 
+<script>
+export default {
+   async asyncData({ $content }) {
+    console.log('hello');
+    const contact = await $content("contact").fetch();
+    console.log(contact, '123');
+    return {
+      contact
+    };
+  },
+};
+</script>
 
 <style lang="scss">
 .top-bar{

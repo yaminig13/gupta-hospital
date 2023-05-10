@@ -1,19 +1,3 @@
-<script setup>
-// import Header from '../components/Header.vue'
-// import TopBar from '../components/TopBar.vue';
-
-let companies=[
-  {
-    name:'ongc',
-    src:'/src/assets/ongc.png'
-  },
-  {
-    name:'ongc',
-    src:'/src/assets/ongc.png'
-  }
-];
-</script>
-
 <template>
   <main>
     <Topbar :show-phone="true"></Topbar>
@@ -39,7 +23,7 @@ let companies=[
         <div class="home__highlights--title company"> Panel of Companies </div>
 
         <div class="home__highlights--wrapper company">
-          <div class="home__highlights--item company"  v-for="company in companies" :style="{backgroundImage:`url(../static/img/${company.name}.png)`}">{{ company.cover }}</div>
+          <div class="home__highlights--item company"  v-for="company in companies" :style="{backgroundImage:`url(${company.cover}`}"></div>
         </div>
       </div>
   </main>
@@ -49,8 +33,6 @@ let companies=[
 export default {
    async asyncData({ $content }) {
     const companies = await $content("companies").fetch();
-    console.log('hi',companies);
-
     return {
       companies,
     };
