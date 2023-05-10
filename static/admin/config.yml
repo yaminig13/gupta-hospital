@@ -46,5 +46,5 @@ collections:
           name: 'ph_gy',
           widget: 'list',
           required: true,
-          field: {label: Phone number}
+          field: { label: 'Phone no- gynaec', name: 'ph_gy' }
         }  
