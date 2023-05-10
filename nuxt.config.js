@@ -41,6 +41,10 @@ export default {
     '@nuxt/content'
   ],
 
+  content: {
+    dir: 'content'
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },

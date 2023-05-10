@@ -16,8 +16,8 @@ let companies=[
 
 <template>
   <main>
-    <Topbar show-phone="true"></Topbar>
-    <Header src="/src/assets/heading.jpg" text="Gupta Hospital" isHome='true'></Header>   
+    <Topbar :show-phone="true"></Topbar>
+    <Header src="/src/assets/heading.jpg" text="Gupta Hospital" :isHome="true"></Header>   
 
     <div class="home__highlights">
 
@@ -39,11 +39,24 @@ let companies=[
         <div class="home__highlights--title company"> Panel of Companies </div>
 
         <div class="home__highlights--wrapper company">
-          <div class="home__highlights--item company"  v-for="company in companies" :style="{backgroundImage:`url(${company.src})`}"></div>
+          <div class="home__highlights--item company"  v-for="company in companies" :style="{backgroundImage:`url(../static/img/${company.name}.png)`}">{{ company.cover }}</div>
         </div>
       </div>
   </main>
 </template>
+
+<script>
+export default {
+   async asyncData({ $content }) {
+    const companies = await $content("companies").fetch();
+    console.log('hi',companies);
+
+    return {
+      companies,
+    };
+  },
+};
+</script>
 
 <style lang="scss">
 .home {
