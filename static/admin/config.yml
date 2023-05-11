@@ -11,6 +11,21 @@ public_folder: /img
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
+  - name: 'header'
+    label: 'Main Image'
+    folder: 'content/header'
+    create: false
+    extension: 'json'
+    format: 'json'
+    slug: '{{hour}}--{{minute}}--{{second}}'
+    preview_path: 'companies/{{slug}}'
+    fields:
+      - {
+          label: 'Image',
+          name: 'image',
+          widget: 'image',
+          required: true
+        }
   - name: 'companies'
     label: 'Companies'
     label_singular: 'Company'

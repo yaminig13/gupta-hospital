@@ -6,15 +6,16 @@
     <div class="home__highlights">
 
       <div class="home__highlights--item">
-        <i class="fa-solid fa-pills"></i>
+        <font-awesome-icon :icon="['fas', 'pills']" />
+        <!-- <i class="fa-solid fa-pills"></i> -->
         <span>In-house Chemist</span>
       </div>
       <div class="home__highlights--item">
-        <i class="fa-regular fa-clock"></i>
+        <font-awesome-icon :icon="['far', 'clock']" />
         <span>Emergency Service 24 X 7</span>
       </div>
       <div class="home__highlights--item">
-        <i class="fa-solid fa-wallet"></i>
+        <font-awesome-icon :icon="['fas', 'wallet']" />
         <span>Cashless payment</span>
       </div>
     </div>
