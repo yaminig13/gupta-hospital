@@ -1,13 +1,12 @@
 <template>
   <main>
     <Topbar :show-phone="true"></Topbar>
-    <Header src="/src/assets/heading.jpg" text="Gupta Hospital" :isHome="true"></Header>   
+    <Header :src="header.image" text="Gupta Hospital" :isHome="true"></Header>   
 
     <div class="home__highlights">
 
       <div class="home__highlights--item">
         <font-awesome-icon :icon="['fas', 'pills']" />
-        <!-- <i class="fa-solid fa-pills"></i> -->
         <span>In-house Chemist</span>
       </div>
       <div class="home__highlights--item">
@@ -34,8 +33,11 @@
 export default {
    async asyncData({ $content }) {
     const companies = await $content("companies").fetch();
+    const headers = await $content("header").fetch();
+    const header = headers[0];
     return {
       companies,
+      header
     };
   },
 };

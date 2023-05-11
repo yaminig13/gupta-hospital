@@ -4,13 +4,15 @@
     "0265 234573"
   ],
   "timings_pr": [
-    "Mon-Fri: 10:00 - 14:00 hrs & 17:00 - 19:00 hrs"
+    "Mon-Fri: 10:00 - 14:00 hrs",
+    "Mon-Fri: 17:00 - 19:00 hrs"
   ],
   "timings_pa": [
-    "Mon-Fri: 09:00 - 14:00 hrs & 15:00 - 21:00 hrs"
+    "Mon-Fri: 09:00 - 14:00 hrs",
+    "Mon-Fri: 15:00 - 21:00 hrs"
   ],
   "address": [
-    "Kabir Complex"
+    "Kabir Complex", "Makarpura Road, Vadodara, Gujarat", "390009, India"
   ],
   "image": "/img/heading.jpg",
   "title": "Contact Information"
