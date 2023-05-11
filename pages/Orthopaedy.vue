@@ -1,23 +1,15 @@
 <template>
   <main>
     <Topbar></Topbar>
-    <Header src="/src/assets/ortho.jpg" text="Orthopaedy Dept" link="/orthopaedy" show-info=true></Header>
+    <Header :src="ortho.image" :text="ortho.title" link="/orthopaedy" :show-info=true></Header>
     <div class="ortho">
 
       <div class="ortho__highlights service">
         <div class="ortho__highlights--title service"> Services </div>
         <div class="ortho__highlights--wrapper service">
-          <div class="ortho__highlights--item service">
+          <div class="ortho__highlights--item service" v-for="service in ortho.services">
             <i class="fa-solid fa-x-ray"></i>
-            <span> X-Ray </span>
-          </div>
-          <div class="ortho__highlights--item service">
-            <i class="fa-solid fa-x-ray"></i>
-            <span> X-Ray </span>
-          </div>
-          <div class="ortho__highlights--item service">
-            <i class="fa-solid fa-x-ray"></i>
-            <span> X-Ray </span>
+            <span> {{ service }} </span>
           </div>
         </div>
       </div>
@@ -38,8 +30,8 @@
 <script>
 export default {
    async asyncData({ $content }) {
-    const ortho = await $content("ortho").fetch();
-    console.log(ortho,"hi");
+    const orthos = await $content("ortho").fetch();
+    const ortho=orthos[0]; 
     return {
       ortho,
     };
