@@ -119,6 +119,12 @@ collections:
           required: true,
           field: { label: 'Phone no', name: 'ph' }
         }
+      - {
+          label: 'Image',
+          name: 'image',
+          widget: 'image',
+          required: true,
+        }   
   - name: 'gynaec'
     label: 'Gynaecology Dept'
     folder: 'content/gynaec'
@@ -155,6 +161,12 @@ collections:
           required: true,
           field: { label: 'Phone no', name: 'ph' }
         }
+      - {
+          label: 'Image',
+          name: 'image',
+          widget: 'image',
+          required: true,
+        }     
   - name: 'about'
     label: 'About Us'
     folder: 'content/about'

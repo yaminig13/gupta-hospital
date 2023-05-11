@@ -39,7 +39,7 @@
 export default {
    async asyncData({ $content }) {
     const ortho = await $content("ortho").fetch();
-    console.log(ortho, '123');
+    console.log(ortho,"hi");
     return {
       ortho,
     };
