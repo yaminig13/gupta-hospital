@@ -11,6 +11,28 @@ public_folder: /img
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
+  - name: 'announce'
+    label: 'Announcement Information'
+    folder: 'content/announce'
+    create: false
+    extension: 'json'
+    format: 'json'
+    delete: false
+    slug: '{{hour}}--{{minute}}--{{second}}'
+    preview_path: 'announce/{{slug}}'
+    fields:
+      - {
+          label: 'Announcement Text',
+          name: 'content',
+          widget: 'text',
+          required: true
+        }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          default: 'Announcement information'
+        }
   - name: 'header'
     label: 'Main Image'
     folder: 'content/header'
@@ -19,7 +41,7 @@ collections:
     format: 'json'
     delete: false
     slug: '{{hour}}--{{minute}}--{{second}}'
-    preview_path: 'companies/{{slug}}'
+    preview_path: 'header/{{slug}}'
     fields:
       - {
           label: 'Image',

@@ -1,5 +1,7 @@
 <template>
   <main>
+    <Announcement :text="announce.content"></Announcement>
+
     <Topbar :show-phone="true" :contact-info="contact"></Topbar>
     <Header :src="header.image" text="Gupta Hospital" :isHome="true"></Header>   
 
@@ -30,20 +32,24 @@
 </template>
 
 <script>
-export default {
-   async asyncData({ $content }) {
-    const companies = await $content("companies").fetch();
-    const headers = await $content("header").fetch();
-    const contacts = await $content("contact").fetch();
 
-    const header = headers[0];
-    const contact = contacts[0];
-    return {
-      companies,
-      header,
-      contact
-    };
-  },
+export default {
+    async asyncData({ $content }) {
+        const companies = await $content("companies").fetch();
+        const headers = await $content("header").fetch();
+        const contacts = await $content("contact").fetch();
+        const announces = await $content("announce").fetch();
+
+        const header = headers[0];
+        const contact = contacts[0];
+        const announce = announces[0];
+        return {
+            companies,
+            header,
+            contact,
+            announce
+        };
+    },
 };
 </script>
 

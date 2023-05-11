@@ -4,14 +4,16 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'gupta-hospital',
+    title: 'Gupta Hospital',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'keywords', content: 'Hospital, gupta, gynaecology, orthopaedy, padam gupta, pratibha, kabir complex, baroda, vadodara, makarpura' },
+      { name: 'author', content: 'Yamini Gupta'},
+      { hid: 'description', name: 'description', content: 'Kabir Complex, Makarpura, Baroda' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

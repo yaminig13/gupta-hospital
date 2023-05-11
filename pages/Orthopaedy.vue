@@ -1,5 +1,6 @@
 <template>
   <main>
+    
     <Topbar></Topbar>
     <Header :src="ortho.image" :text="ortho.title" link="/orthopaedy" :phone-numbers="ortho.phs"></Header>
     <div class="ortho">
@@ -82,6 +83,7 @@ export default {
       padding: 2rem;
       justify-content: center;
       align-items: center;
+      text-align: center;
 
       &.service {
         background-color: #f5f9e9;

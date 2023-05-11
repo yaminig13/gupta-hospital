@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Announcement :text="announce.content"></Announcement>
     <Topbar :show-phone=true></Topbar>
     <Header :src="contact.image" text="Gupta Hospital" :show-subtext=true></Header>
     <div class="contact">
@@ -46,8 +47,11 @@ export default {
    async asyncData({ $content }) {
     const contacts = await $content("contact").fetch();
     const contact = contacts[0]; 
+    const announces = await $content("announce").fetch();
+    const announce = announces[0];
+
     return {
-      contact,
+      contact,announce
     };
   },
 };

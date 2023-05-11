@@ -27,7 +27,7 @@ defineProps({
 <template>
   <div>
     <div class="header__image" :style="{backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(${src})`}"/>
-    <div class="header__text"> <NuxtLink :to="link">{{ text }} </NuxtLink></div>
+    <h1 class="header__text"> <NuxtLink :to="link">{{ text }} </NuxtLink></h1>
     <div class="header__buttons" v-if="isHome">
       <NuxtLink to="/orthopaedy">
         <div class="header__buttons--main"> Orthopaedy</div> 
