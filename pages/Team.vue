@@ -1,6 +1,6 @@
 <template>
   <main>
-    <TopBar></TopBar>
+    <Topbar></Topbar>
     <!-- <Header src="/src/assets/heading.jpg" text="Gupta Hospital"></Header> -->
     <div class="team__title">
         Our Surgeons

@@ -1,8 +1,7 @@
 <script setup>
 defineProps({
-  showPhone: {
-    type: Boolean,
-    default: false
+  contactInfo: {
+    type: Object,
   }
 
 })
@@ -10,11 +9,12 @@ defineProps({
 <template>
     <div class="top-bar">
         <div class="top-bar__wrapper">
-            <div class="top-bar__left"  v-if="showPhone">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span> 91919292 </span>
-                <i class="fa-solid fa-phone-flip"></i>
-                <span> 0265 12345 </span>
+            <div class="top-bar__left"  v-if="contactInfo">
+                <font-awesome-icon :icon="['fab', 'whatsapp']" />
+                <span> {{ contactInfo.wa_no }} </span>
+                <font-awesome-icon :icon="['fas', 'phone-flip']" />
+                <span> {{ contactInfo.phs[0] }} </span>
+
             </div>
             <div v-else class="top-bar__title">
                 <NuxtLink to="/">GUPTA HOSPITAL</NuxtLink>

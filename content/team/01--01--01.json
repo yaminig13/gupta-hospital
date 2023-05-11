@@ -1,6 +1,5 @@
 {
-  "image_team": "/img/team.jpg",
-  "infor_tem": [
+  "info_team": [
     "Mr. Chetan Joisar",
     "Mrs. Vaishali Parikh",
     "Mrs. Vaishali Parikh",
@@ -10,14 +9,12 @@
     "MS (ORTHOPEDICS)",
     "Director & Head of Orthopedic Department"
   ],
-  "image_pr": "/img/doctor1.jpg",
-  "img_pa": "/img/doctor2.jpg",
   "info_pr": [
     "DGO (GYNAECOLOGY)",
     "Head of the Gynaecology Department"
   ],
-  "image_pa": "/img/doctor2.jpg",
+  "img_pa": "/img/doctor1.jpg",
   "title": "Team Information",
   "img_team": "/img/team.jpg",
-  "img_pr": "/img/doctor1.jpg"
+  "img_pr": "/img/doctor2.jpg"
 }

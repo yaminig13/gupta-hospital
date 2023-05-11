@@ -15,13 +15,12 @@ defineProps({
         type: Boolean,
         default: false
     },
-    showInfo: {
-        type: Boolean,
-        default: false
-    },
     showSubtext: {
         type: Boolean,
         default: false
+    },
+    phoneNumbers: {
+      type: Array
     }
 })
 </script>
@@ -42,22 +41,14 @@ defineProps({
       Serving with a smile
     </div>
 
-    <div class="header__contact-info" v-else-if="showInfo">
+    <div class="header__contact-info" v-else-if="phoneNumbers">
       <div class="header__contact-info--text">
         <span>
           To book appointment, call us at
         </span>
-        <span>
-          <i class="fa-solid fa-phone-flip"></i>
-          123456
-        </span>
-        <span>
-          <i class="fa-solid fa-phone-flip"></i>
-          123456
-        </span>
-        <span>
-          <i class="fa-solid fa-phone-flip"></i>
-          123456
+        <span v-for="number in phoneNumbers">
+          <font-awesome-icon :icon="['fas', 'phone-flip']" />
+          {{ number }}
         </span>
       </div>
 

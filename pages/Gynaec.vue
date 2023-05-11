@@ -1,26 +1,8 @@
 <template>
   <main>
     <Topbar></Topbar>
-    <Header :src="gynaec.image" :text="gynaec.title" buttons="false" link="/gynaec"></Header>
+    <Header :src="gynaec.image" :text="gynaec.title" buttons="false" :phone-numbers="gynaec.phs" link="/gynaec"></Header>
     <div class="ortho">
-      <!-- <div class="ortho__header--text">
-        <span>
-          To book appointment, call us at
-        </span>
-        <span>
-          <i class="fa-solid fa-phone-flip"></i>
-          123456
-        </span>
-        <span>
-          <i class="fa-solid fa-phone-flip"></i>
-          123456
-        </span>
-        <span>
-          <i class="fa-solid fa-phone-flip"></i>
-          123456
-        </span>
-      </div> -->
-
       <div class="ortho__highlights service">
 
         <div class="ortho__highlights--title service"> Services </div>

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Topbar :show-phone="true"></Topbar>
+    <Topbar :show-phone="true" :contact-info="contact"></Topbar>
     <Header :src="header.image" text="Gupta Hospital" :isHome="true"></Header>   
 
     <div class="home__highlights">
@@ -34,10 +34,14 @@ export default {
    async asyncData({ $content }) {
     const companies = await $content("companies").fetch();
     const headers = await $content("header").fetch();
+    const contacts = await $content("contact").fetch();
+
     const header = headers[0];
+    const contact = contacts[0];
     return {
       companies,
-      header
+      header,
+      contact
     };
   },
 };

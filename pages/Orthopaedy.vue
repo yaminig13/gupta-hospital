@@ -1,7 +1,7 @@
 <template>
   <main>
     <Topbar></Topbar>
-    <Header :src="ortho.image" :text="ortho.title" link="/orthopaedy" :show-info=true></Header>
+    <Header :src="ortho.image" :text="ortho.title" link="/orthopaedy" :phone-numbers="ortho.phs"></Header>
     <div class="ortho">
 
       <div class="ortho__highlights service">
@@ -31,7 +31,7 @@
 export default {
    async asyncData({ $content }) {
     const orthos = await $content("ortho").fetch();
-    const ortho=orthos[0]; 
+    const ortho = orthos[0];
     return {
       ortho,
     };
@@ -51,6 +51,7 @@ export default {
     
     &.service {
       background-color: #093824;
+      font-size: large;
     }
 
     &--title {
