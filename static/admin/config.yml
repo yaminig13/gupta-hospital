@@ -17,6 +17,7 @@ collections:
     create: false
     extension: 'json'
     format: 'json'
+    delete: false
     slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'companies/{{slug}}'
     fields:
@@ -24,8 +25,14 @@ collections:
           label: 'Image',
           name: 'image',
           widget: 'image',
-          required: true
+          default: "Image Information"
         }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          required: true
+        }  
   - name: 'companies'
     label: 'Companies'
     label_singular: 'Company'
@@ -49,6 +56,7 @@ collections:
     create: false
     format: 'json'
     extension: 'json'
+    delete: false
     slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'contact/{{slug}}'
     fields:
@@ -104,6 +112,7 @@ collections:
     create: false
     format: 'json'
     extension: 'json'
+    delete: false
     slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'ortho/{{slug}}'
     fields:
@@ -146,6 +155,7 @@ collections:
     create: false
     format: 'json'
     extension: 'json'
+    delete: false  
     slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'gynaec/{{slug}}'
     fields:
@@ -188,6 +198,7 @@ collections:
     create: false
     format: 'json'
     extension: 'json'
+    delete: false
     slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'about/{{slug}}'
     fields:
@@ -215,6 +226,7 @@ collections:
     create: false
     format: 'json'
     extension: 'json'
+    delete: false
     slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'team/{{slug}}'
     fields:

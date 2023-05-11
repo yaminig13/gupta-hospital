@@ -1,0 +1,7 @@
+{
+    "title": "Gynaecology Dept.",
+    "surgeries": ["Surgery 1","Surgery 2","Surgery 3"],
+    "services": ["Sonography","Service 2","Service 3"],
+    "phs": ["0265 222222","0265 111111"],
+    "image": "/img/heading.jpg"
+}
