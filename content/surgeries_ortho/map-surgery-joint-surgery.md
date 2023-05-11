@@ -1,3 +1,0 @@
----
-surgery: Joint surgery
----

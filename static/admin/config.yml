@@ -16,8 +16,9 @@ collections:
     label_singular: 'Company'
     folder: 'content/companies'
     create: true
-    format: 'frontmatter'
-    slug: '{{slug}}'
+    format: 'json'
+    extension: 'json'
+    slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'companies/{{slug}}'
     fields:
       - {
@@ -30,11 +31,18 @@ collections:
   - name: 'contact'
     label: 'Contact Info'
     folder: 'content/contact'
-    create: true
-    format: 'frontmatter'
-    slug: '{{slug}}'
+    create: false
+    format: 'json'
+    extension: 'json'
+    slug: '{{hour}}--{{minute}}--{{second}}'
     preview_path: 'contact/{{slug}}'
     fields:
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          default: 'Contact Details'
+        }   
       - {
           label: 'Whatsapp Number',
           name: 'wa_no',
@@ -42,9 +50,186 @@ collections:
           required: true
         }
       - {
-          label: 'Phone Number - Gynaec',
-          name: 'ph_gy',
+          label: 'Phone Numbers',
+          name: 'phs',
           widget: 'list',
           required: true,
-          field: { label: 'Phone no- gynaec', name: 'ph_gy' }
-        }  
+          field: { label: 'Phone no', name: 'ph' }
+        }
+      - {
+          label: 'Timings - Dr. Pratibha',
+          name: 'timings_pr',
+          widget: 'list',
+          required: true,
+          field: { label: 'timing', name: 'timing_pr' }
+        }
+      - {
+          label: 'Timings - Dr. Padam',
+          name: 'timings_pa',
+          widget: 'list',
+          required: true,
+          field: { label: 'timing', name: 'timing_pa' }
+        }
+      - {
+          label: 'Address',
+          name: 'address',
+          widget: 'list',
+          required: true,
+          field: { label: 'line', name: 'line', widget: 'string' }
+        }
+      - {
+          label: 'Image',
+          name: 'image',
+          widget: 'image',
+          required: true,
+        }          
+  - name: 'ortho'
+    label: 'Orthopaedy Dept'
+    folder: 'content/ortho'
+    create: false
+    format: 'json'
+    extension: 'json'
+    slug: '{{hour}}--{{minute}}--{{second}}'
+    preview_path: 'ortho/{{slug}}'
+    fields:
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          default: 'Orthopaedy Details'
+        } 
+      - {
+          label: 'Surgeries',
+          name: 'surgeries',
+          widget: 'list',
+          required: true,
+          field: { label: 'Surgery Name', name: 'surgery' }
+        }
+      - {
+          label: 'Services',
+          name: 'services',
+          widget: 'list',
+          required: true,
+          field: { label: 'Service Name', name: 'service' }
+        }
+      - {
+          label: 'Phone Numbers',
+          name: 'phs',
+          widget: 'list',
+          required: true,
+          field: { label: 'Phone no', name: 'ph' }
+        }
+  - name: 'gynaec'
+    label: 'Gynaecology Dept'
+    folder: 'content/gynaec'
+    create: false
+    format: 'json'
+    extension: 'json'
+    slug: '{{hour}}--{{minute}}--{{second}}'
+    preview_path: 'gynaec/{{slug}}'
+    fields:
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          default: 'Gynaecology Details'
+        } 
+      - {
+          label: 'Surgeries',
+          name: 'surgeries',
+          widget: 'list',
+          required: true,
+          field: { label: 'Surgery Name', name: 'surgery' }
+        }
+      - {
+          label: 'Services',
+          name: 'services',
+          widget: 'list',
+          required: true,
+          field: { label: 'Service Name', name: 'service' }
+        }
+      - {
+          label: 'Phone Numbers',
+          name: 'phs',
+          widget: 'list',
+          required: true,
+          field: { label: 'Phone no', name: 'ph' }
+        }
+  - name: 'about'
+    label: 'About Us'
+    folder: 'content/about'
+    create: false
+    format: 'json'
+    extension: 'json'
+    slug: '{{hour}}--{{minute}}--{{second}}'
+    preview_path: 'about/{{slug}}'
+    fields:
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          default: 'About us Details'
+        } 
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'text',
+          required: true,
+        }
+      - {
+          label: 'Image',
+          name: 'image',
+          widget: 'image',
+          required: true,
+        }
+  - name: 'team'
+    label: 'Team'
+    folder: 'content/team'
+    create: false
+    format: 'json'
+    extension: 'json'
+    slug: '{{hour}}--{{minute}}--{{second}}'
+    preview_path: 'team/{{slug}}'
+    fields:
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          default: 'Team Details'
+        } 
+      - {
+          label: 'Image - Dr. Pratibha',
+          name: 'img_pr',
+          widget: 'image',
+          required: true,
+        }
+      - {
+          label: 'Image - Dr. Padam',
+          name: 'img_pa',
+          widget: 'image',
+          required: true,
+        }
+      - {
+          label: 'Image - Team',
+          name: 'img_team',
+          widget: 'image',
+          required: true,
+        } 
+      - {
+          label: 'Info - Dr. Pratibha',
+          name: 'info_pr',
+          widget: 'list',
+          field: { label: 'info', name: 'line' }
+        } 
+      - {
+          label: 'Info - Dr. Padam',
+          name: 'info_pa',
+          widget: 'list',
+          field: { label: 'info', name: 'line' }
+        }
+      - {
+          label: 'Team Members',
+          name: 'info_team',
+          widget: 'list',
+          field: { label: 'name', name: 'name' }
+        }                
