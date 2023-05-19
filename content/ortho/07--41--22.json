@@ -1,6 +1,19 @@
 {
     "title": "Orthopaedy Details",
-    "surgeries": ["Knee Surgery","Surgery 2","Surgery 3"],
+    "surgeries": [
+        {
+            "name": "Knee Surgery",
+            "desc": "Lorem ipsum dolor sit amet. Eum nisi rerum sit dicta labore aut illo sapiente est internos explicabo. In minus quisquam et voluptas perspiciatis et blanditiis voluptatibus et omnis delectus.Aut cumque dolores et error nostrum 33 nemo nesciunt non omnis dicta aut rerum dolorum est reiciendis accusamus et nemo explicabo. Et impedit voluptas ex quam suscipit et consequatur voluptatem qui distinctio assumenda et dolores nihil! Qui eius voluptatem eos deserunt quod quo nisi rerum aut consequatur voluptate vel ullam vero sed ullam beatae. Et mollitia provident non possimus totam aut galisum libero."
+        },
+        {
+            "name": "Disc Replacement Surgery",
+            "desc": "Disc replacement surgery is implantation of a “mobile” device in intervertebral disc space after discectomy. It maintains motion at operated level unlike spine fusion surgery which eliminates motion. Loss of motion can lead to decreased flexibility of spine. Also, fusion can increase stress on next spine level causing accelerated degeneration of that segment (Adjacent Segment Degeneration/ ASD). ASD is one of the major cause of revision spine surgeries. These problems are further increased in multi-level fusions. Disc replacement avoids these problems. Disc replacement is used for both cervical and lumbar spine; however, results are more encouraging in cervical spine in carefully selected patients. Indications: Spondylosis: A mild to moderate spondylosis can be treated by disc replacement. It will eliminate pain of disc degeneration while maintaining motion. Cervical Disc Prolapse: A younger patient with cervical disc herniation is ideal case. Multilevel Cervical Instrumentation Surgery: Cervical disc replacement can be combined at the end of construct in a multilevel cervical disc disease instrumentation. While the middle levels are fused, disc is replaced at both ends. This will preserve some spinal movements  and also reduce stress on adjacent levels reducing ASD. Spine Flexibility Maintains spinal motion and patients flexibility."        
+        },
+        {
+            "name": "Surgery 2",
+            "desc": "eorueirueiruieruieurieurieurieurierueirueiurirueirui"
+        }
+    ],
     "services": ["X-ray","Service 2","Service 3"],
     "phs": ["0265 222222","0265 111111"],
     "image": "/img/heading.jpg"

@@ -19,9 +19,12 @@
         <div class="ortho__highlights--title surgery"> Surgeries </div>
 
         <div class="ortho__highlights--wrapper surgery">
-          <div class="ortho__highlights--item surgery" v-for="surgery in ortho.surgeries">
-            <span> {{ surgery }} </span>
+          <div class="ortho__highlights--item surgery" v-for="surgery in ortho.surgeries" @click="toggleDesc(surgery)">
+            <span> {{ surgery.name }} </span>
           </div>
+        </div>
+        <div class="ortho__highlights--desc" v-if="showDesc">
+          <div class="info surgery"> {{ description }} </div>
         </div>
       </div>
     </div>
@@ -37,6 +40,21 @@ export default {
       ortho,
     };
   },
+
+  data() {
+    return {
+      description: null,
+      showDesc: false
+    }
+  },
+  methods: {
+    toggleDesc(surgery) {
+      surgery.showDesc=!surgery.showDesc;
+      this.showDesc = surgery.showDesc;
+      this.description = surgery.desc;
+      console.log(this.description,"hi")
+    }
+  }
 };
 </script>
 
@@ -49,6 +67,20 @@ export default {
     padding: 2rem;
     justify-content: space-between;
     flex-direction: column;
+
+    &--desc {
+      margin: .5rem;
+      color: white;
+
+      .info {
+        padding: 1rem;
+
+        &.surgery {
+          background: var(--color-background);
+        }
+      }
+    }
+    
     
     &.service {
       font-size: large;
@@ -83,6 +115,7 @@ export default {
         margin: .5rem;
       }
       display: flex;
+      cursor: pointer;
       flex-direction: column;
       border: 2px solid black;
       margin: 2rem;

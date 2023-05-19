@@ -149,7 +149,9 @@ collections:
           name: 'surgeries',
           widget: 'list',
           required: true,
-          field: { label: 'Surgery Name', name: 'surgery' }
+          field:
+          { label: 'Surgery Name', name: 'surgery', widget: 'string'},
+          { label: 'Surgery Description', name: 'desc', widget: 'text'}
         }
       - {
           label: 'Services',
