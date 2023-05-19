@@ -52,7 +52,6 @@ export default {
         justify-content: center;
         display: flex;
         font-size: x-large;
-        background-color: #093824;
         color: white;
     }
 

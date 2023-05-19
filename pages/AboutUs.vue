@@ -31,7 +31,6 @@ export default {
 <style lang="scss">
 .about {
   padding-top: 2rem;
-  background-color: #093824;
 
   &__title {
     color: #f5f9e9;

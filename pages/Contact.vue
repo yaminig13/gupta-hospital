@@ -63,7 +63,6 @@ export default {
         grid-template-columns: unset;
         grid-template-rows: 1fr 2fr 1fr;
     }
-    background-color: #093824;
     color: #f5f9e9;
     padding: 2rem;
     font-size: medium;

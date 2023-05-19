@@ -27,7 +27,9 @@
         <div class="home__highlights--wrapper company">
           <div class="home__highlights--item company"  v-for="company in companies" :style="{backgroundImage:`url(${company.cover}`}"></div>
         </div>
-      </div>
+    </div>
+
+    <Footer></Footer>
   </main>
 </template>
 
@@ -70,15 +72,13 @@ export default {
       flex-direction: column;
       align-items: center;
     }
-
-    background-color: #093824;
     display: flex;
     // margin: 2rem;
     padding: 2rem;
     justify-content: space-between;
 
     &.company {
-      background-color: #f5f9e9;
+      background-color: var(--color-lightest);
       display: block;
     }
 
@@ -100,12 +100,12 @@ export default {
       border: 2px solid black;
       margin: 2rem;
       padding: 2rem;
-      background-color:  #f5f9e9;
-      color: #093824;
+      background-color:  var(--color-lightest);
       height: 10rem;
       width: 15rem;
       justify-content: center;
       align-items: center;
+      color: var(--color-border);
 
       svg {
         font-size: xx-large;

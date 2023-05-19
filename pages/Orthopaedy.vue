@@ -51,7 +51,6 @@ export default {
     flex-direction: column;
     
     &.service {
-      background-color: #093824;
       font-size: large;
     }
 

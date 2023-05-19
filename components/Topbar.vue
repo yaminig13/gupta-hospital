@@ -42,23 +42,23 @@ defineProps({
 
 <style lang="scss">
 .top-bar{
-    background-color: #093824;
-    padding-top: 5px;
+    padding: 0.25rem 0 0.25rem 3rem;
+    color: var(--color-lightest);
+    width: 100%;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
 
     &__wrapper {
         @media only screen and (max-width: 600px) {
            justify-content: flex-end;
         }
 
+        
         span {
             padding: 0 1rem 0 0;
         }
-
-        padding: 0 0 0 3rem;
-        color: #f5f9e9;
         display: flex;
         justify-content: space-between;
-        
     }
     &__left {
         @media only screen and (max-width: 600px) {
@@ -71,11 +71,11 @@ defineProps({
 
         &--item {
             padding: 0 1rem;
-            border-right: 1px solid white;
+            border-right: 1px solid var(--color-lightest);
             cursor: pointer;
 
             &:hover {
-                background-color: #f5f9e9;
+                background-color: var(--color-lightest);
                 color: #093824;
             }
         }

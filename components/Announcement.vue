@@ -19,7 +19,7 @@ defineProps({
 
 <style lang="scss">
 .announce-bar{
-    background-color: #0e5235;
+    background-color: var(--color-announcement);
     padding-top: 5px;
     color: aliceblue;
     display: flex;

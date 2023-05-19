@@ -59,8 +59,8 @@ export default {
     justify-content: space-between;
     flex-direction: column;
     
-    &.service {
-      background-color: #093824;
+    &.surgery {
+      background-color: var(--color-lightest);
     }
 
     &--info {
@@ -92,14 +92,14 @@ export default {
       align-items: center;
 
       &.service {
-        background-color: #f5f9e9;
-        color: #093824;
+        background-color: var(--color-lightest);
+        color: var(--color-border);
         height: 10rem;
         width: 15rem;
       }
 
       &.surgery {
-        background-color: #093824;
+        background-color: var(--color-background);
         color: #f5f9e9;
         height: 5rem;
         width: 10rem;

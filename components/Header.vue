@@ -71,7 +71,7 @@ defineProps({
             width: 50%;
             justify-content: center;
             display: flex;
-            color: aliceblue;
+            color: var(--color-lightest);
         }
 
         &__image {
@@ -102,7 +102,9 @@ defineProps({
         &__text {
             @media only screen and (max-width: 600px) {
                 width: 100%;
+                font-size: 2.5rem;
             }
+            font-weight: normal;
             top: 4rem;
             z-index: 1;
             color: white;
@@ -127,18 +129,19 @@ defineProps({
             &--main {
                 height: 50px;
                 padding: 1rem 2rem;
-                background-color: #f5f9e9;  
-                color:  #093824;
-                border: #093824 solid 2px;
+                background-color: var(--color-background-light);  
+                color:  var(--color-lightest);
+                border: var(--color-border) solid 2px;
+                border-radius: 1rem;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
                 &:hover {
-                    background-color: #093824;
-                    color: #f5f9e9;
-                    border: #f5f9e9 2px solid;
+                    background-color: var(--color-background);
+                    color: white;
+                    border: white 2px solid;
                 }
             }
         }
