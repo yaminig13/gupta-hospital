@@ -2,24 +2,24 @@
   <main>
     <Topbar></Topbar>
     <Header :src="gynaec.image" :text="gynaec.title" buttons="false" :phone-numbers="gynaec.phs" link="/gynaec"></Header>
-    <div class="ortho">
-      <div class="ortho__highlights service">
+    <div class="gynaec">
+      <div class="gynaec__highlights service">
 
-        <div class="ortho__highlights--title service"> Services </div>
+        <div class="gynaec__highlights--title service"> Services </div>
 
-        <div class="ortho__highlights--wrapper service">
-          <div class="ortho__highlights--item service" v-for="service in gynaec.services">
+        <div class="gynaec__highlights--wrapper service">
+          <div class="gynaec__highlights--item service" v-for="service in gynaec.services">
             <i class="fa-solid fa-x-ray"></i>
             <span> {{ service }} </span>
           </div>
         </div>
       </div>
 
-      <div class="ortho__highlights surgery">
-        <div class="ortho__highlights--title surgery"> Surgeries </div>
+      <div class="gynaec__highlights surgery">
+        <div class="gynaec__highlights--title surgery"> Surgeries </div>
 
-        <div class="ortho__highlights--wrapper surgery">
-          <div class="ortho__highlights--item surgery" v-for="surgery in gynaec.surgeries">
+        <div class="gynaec__highlights--wrapper surgery">
+          <div class="gynaec__highlights--item surgery" v-for="surgery in gynaec.surgeries">
             <span> {{ surgery }} </span>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss">
 
-.ortho {
+.gynaec {
   &__header--text {
     position: absolute;
     top: -10rem;
@@ -83,6 +83,10 @@ export default {
     }
 
     &--item {
+      @media only screen and (max-width: 600px) {
+        padding: 1rem;
+        margin: .5rem;
+      }
       display: flex;
       flex-direction: column;
       border: 2px solid black;
@@ -94,7 +98,7 @@ export default {
       &.service {
         background-color: var(--color-lightest);
         color: var(--color-border);
-        height: 10rem;
+        height: 5rem;
         width: 15rem;
       }
 

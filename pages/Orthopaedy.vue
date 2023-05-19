@@ -54,6 +54,10 @@ export default {
       font-size: large;
     }
 
+    &.surgery {
+      background-color: var(--color-lightest);
+    }
+
     &--title {
       text-align: center;
       font-size: xx-large;
@@ -66,7 +70,6 @@ export default {
 
     &--wrapper {
       @media only screen and (max-width: 600px) {
-        flex-direction: column;
         align-items: center;
       }
 
@@ -75,6 +78,10 @@ export default {
     }
 
     &--item {
+      @media only screen and (max-width: 600px) {
+        padding: 1rem;
+        margin: .5rem;
+      }
       display: flex;
       flex-direction: column;
       border: 2px solid black;
@@ -85,14 +92,14 @@ export default {
       text-align: center;
 
       &.service {
-        background-color: #f5f9e9;
-        color: #093824;
-        height: 10rem;
+        background-color: var(--color-lightest);
+        color: var(--color-border);
+        height: 5rem;
         width: 15rem;
       }
 
       &.surgery {
-        background-color: #093824;
+        background-color: var(--color-background);
         color: #f5f9e9;
         height: 5rem;
         width: 10rem;
