@@ -139,8 +139,8 @@ collections:
     preview_path: 'ortho/{{slug}}'
     fields:
       - {
-          label: 'Title',
-          name: 'title',
+          label: "Title",
+          name: "title",
           widget: 'string',
           default: 'Orthopaedy Details'
         } 
@@ -149,10 +149,10 @@ collections:
           name: 'surgeries',
           widget: 'list',
           required: true,
-          field:
-          { label: 'Surgery Name', name: 'surgery', widget: 'string'},
-          { label: 'Surgery Description', name: 'desc', widget: 'text'}
-        }
+          fields: 
+          [{ label: 'Surgery Name', name: 'name' },
+          { label: 'Surgery Desc', name: 'desc' }]
+        }  
       - {
           label: 'Services',
           name: 'services',
@@ -194,7 +194,9 @@ collections:
           name: 'surgeries',
           widget: 'list',
           required: true,
-          field: { label: 'Surgery Name', name: 'surgery' }
+          fields: 
+          [{ label: 'Surgery Name', name: 'name' },
+          { label: 'Surgery Desc', name: 'desc' }]
         }
       - {
           label: 'Services',

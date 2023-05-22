@@ -69,9 +69,12 @@ defineProps({
     &__right {
         display: flex;
 
+        a {
+            border-right: 1px solid var(--color-lightest);
+        }
+
         &--item {
             padding: 0 1rem;
-            border-right: 1px solid var(--color-lightest);
             cursor: pointer;
 
             &:hover {

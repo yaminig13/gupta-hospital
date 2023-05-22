@@ -23,7 +23,7 @@
             <span> {{ surgery.name }} </span>
           </div>
         </div>
-        <div class="ortho__highlights--desc" v-if="showDesc">
+        <div class="ortho__highlights--desc" v-show="description">
           <div class="info surgery"> {{ description }} </div>
         </div>
       </div>
@@ -44,15 +44,12 @@ export default {
   data() {
     return {
       description: null,
-      showDesc: false
     }
   },
   methods: {
     toggleDesc(surgery) {
-      surgery.showDesc=!surgery.showDesc;
-      this.showDesc = surgery.showDesc;
       this.description = surgery.desc;
-      console.log(this.description,"hi")
+      setTimeout(document.querySelector('.ortho__highlights .surgery').scrollIntoView(),300);
     }
   }
 };
@@ -107,6 +104,7 @@ export default {
 
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     &--item {
@@ -115,7 +113,7 @@ export default {
         margin: .5rem;
       }
       display: flex;
-      cursor: pointer;
+      flex: 1;
       flex-direction: column;
       border: 2px solid black;
       margin: 2rem;
@@ -132,11 +130,18 @@ export default {
       }
 
       &.surgery {
+        cursor: pointer;
         background-color: var(--color-background);
         color: #f5f9e9;
         height: 5rem;
         width: 10rem;
+        border-radius: 1rem;
+
+        &:focus {
+          background-color: var(--color-background-light);
+        }
       }
+
       svg {
         font-size: xx-large;
         padding-bottom: 1rem;

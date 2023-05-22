@@ -19,9 +19,12 @@
         <div class="gynaec__highlights--title surgery"> Surgeries </div>
 
         <div class="gynaec__highlights--wrapper surgery">
-          <div class="gynaec__highlights--item surgery" v-for="surgery in gynaec.surgeries">
-            <span> {{ surgery }} </span>
+          <div class="gynaec__highlights--item surgery" v-for="surgery in gynaec.surgeries" @click="toggleDesc(surgery)">
+            <span> {{ surgery.name }} </span>
           </div>
+        </div>
+        <div class="gynaec__highlights--desc" v-show="description">
+          <div class="info surgery"> {{ description }} </div>
         </div>
       </div>
     </div>
@@ -37,6 +40,17 @@ export default {
       gynaec,
     };
   },
+   data() {
+    return {
+      description: null,
+    }
+  },
+  methods: {
+    toggleDesc(surgery) {
+      this.description = surgery.desc;
+      setTimeout(document.querySelector('.gynaec__highlights .surgery').scrollIntoView(),300);
+    }
+  }
 };
 </script>
 
@@ -58,6 +72,19 @@ export default {
     padding: 2rem;
     justify-content: space-between;
     flex-direction: column;
+
+    &--desc {
+      margin: .5rem;
+      color: white;
+
+      .info {
+        padding: 1rem;
+
+        &.surgery {
+          background: var(--color-background);
+        }
+      }
+    }
     
     &.surgery {
       background-color: var(--color-lightest);
@@ -80,6 +107,8 @@ export default {
     &--wrapper {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+
     }
 
     &--item {
@@ -88,6 +117,7 @@ export default {
         margin: .5rem;
       }
       display: flex;
+      flex: 1;
       flex-direction: column;
       border: 2px solid black;
       margin: 2rem;
@@ -103,11 +133,18 @@ export default {
       }
 
       &.surgery {
+        cursor: pointer;
         background-color: var(--color-background);
         color: #f5f9e9;
         height: 5rem;
         width: 10rem;
+        border-radius: 1rem;
+
+        &:focus {
+          background-color: var(--color-background-light);
+        }
       }
+
       svg {
         font-size: xx-large;
         padding-bottom: 1rem;
