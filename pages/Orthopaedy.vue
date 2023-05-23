@@ -19,9 +19,9 @@
         <div class="ortho__highlights--title surgery"> Surgeries </div>
 
         <div class="ortho__highlights--wrapper surgery">
-          <div class="ortho__highlights--item surgery" v-for="surgery in ortho.surgeries" @click="toggleDesc(surgery)">
+          <button class="ortho__highlights--item surgery" v-for="surgery in ortho.surgeries" @click="toggleDesc(surgery)">
             <span> {{ surgery.name }} </span>
-          </div>
+          </button>
         </div>
         <div class="ortho__highlights--desc" v-show="description">
           <div class="info surgery"> {{ description }} </div>
@@ -141,6 +141,7 @@ export default {
 
         &:focus {
           background-color: var(--color-background-light);
+          color: var(--color-border);
         }
       }
 

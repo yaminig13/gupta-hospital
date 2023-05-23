@@ -19,9 +19,9 @@
         <div class="gynaec__highlights--title surgery"> Surgeries </div>
 
         <div class="gynaec__highlights--wrapper surgery">
-          <div class="gynaec__highlights--item surgery" v-for="surgery in gynaec.surgeries" @click="toggleDesc(surgery)">
-            <span> {{ surgery.name }} </span>
-          </div>
+          <button class="gynaec__highlights--item surgery" v-for="surgery in gynaec.surgeries" @click="toggleDesc(surgery,$event)">
+            {{ surgery.name }} 
+          </button>
         </div>
         <div class="gynaec__highlights--desc" v-show="description">
           <div class="info surgery"> {{ description }} </div>
@@ -47,7 +47,11 @@ export default {
     }
   },
   methods: {
-    toggleDesc(surgery) {
+    toggleDesc(surgery,event) {
+      // let clickedEl=event.target;
+      // clickedEl.style.backgroundColor="#71b8f4";
+      // clickedEl.style.color="black";
+
       this.description = surgery.desc;
       setTimeout(document.querySelector('.gynaec__highlights .surgery').scrollIntoView(),300);
     }
@@ -145,6 +149,7 @@ export default {
 
         &:focus {
           background-color: var(--color-background-light);
+          color: var(--color-border);
         }
       }
 
