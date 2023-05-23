@@ -8,7 +8,7 @@
             <a href="https://goo.gl/maps/5R9Y6re4KRzjGVAy6?coh=178572&entry=tt">
                 <font-awesome-icon :icon="['fas', 'location-dot']" /></a>
                 <span v-for="line in contact.address">{{ line }}</span>
-            
+            <a class="location" href="https://goo.gl/maps/5R9Y6re4KRzjGVAy6?coh=178572&entry=tt">Locate us at Google Maps</a>
         </div>
         <div class="contact__timings">
             <span class="contact__title">Visiting hours</span>
@@ -39,6 +39,7 @@
             <span>We are open 24X7 in case of emergencies</span>
         </div>
     </div>
+    <Footer></Footer>
   </main>
 </template>
 
@@ -78,6 +79,11 @@ export default {
     &__address {
         @media only screen and (max-width: 600px) {
             border-bottom: 1px solid;
+        }
+
+        .location {
+            text-decoration: underline;
+            margin-top: 1rem;
         }
         display: flex;
         flex-direction: column;

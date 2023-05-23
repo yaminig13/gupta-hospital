@@ -28,6 +28,7 @@
         </div>
       </div>
     </div>
+    <Footer></Footer>
   </main>
 </template>
 
@@ -105,19 +106,21 @@ export default {
 
 
     &--wrapper {
+      @media only screen and (max-width: 600px) {
+        align-items: center;
+      }
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-
     }
 
     &--item {
       @media only screen and (max-width: 600px) {
         padding: 1rem;
         margin: .5rem;
+        flex: 1;
       }
       display: flex;
-      flex: 1;
       flex-direction: column;
       border: 2px solid black;
       margin: 2rem;

@@ -62,7 +62,7 @@ defineProps({
 <style lang="scss">
     .header {
         &__subtitle {
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 768px) {
                 width: 100%;
             }
             font-size: x-large;
@@ -82,7 +82,7 @@ defineProps({
         }
 
         &__contact-info {
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 768px) {
                 width: 100%;
             }
 
@@ -100,7 +100,7 @@ defineProps({
         }
 
         &__text {
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 768px) {
                 width: 100%;
                 font-size: 2.5rem;
             }
@@ -116,7 +116,7 @@ defineProps({
 
         }
         &__buttons {
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 768px) {
                 width: 100%;
                 z-index: 1;
             }

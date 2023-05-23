@@ -25,12 +25,14 @@
         Our Team
     </div>
     <div class="team__pictures">
-            <div class="team__pictures--team" :style="{backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(${team.img_team})`}">
-                <div class="team__pictures--info">
-                    <span v-for="info in team.info_team">{{ info }}</span>
-                </div>
+        <div class="team__pictures--team" :style="{backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(${team.img_team})`}">
+            <div class="team__pictures--info">
+                <span v-for="info in team.info_team">{{ info }}</span>
             </div>
         </div>
+    </div>
+    <Footer></Footer>
+
   </main>
 </template>
 

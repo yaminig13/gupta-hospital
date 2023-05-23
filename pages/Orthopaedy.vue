@@ -28,6 +28,8 @@
         </div>
       </div>
     </div>
+    <Footer></Footer>
+
   </main>
 </template>
 
@@ -111,9 +113,9 @@ export default {
       @media only screen and (max-width: 600px) {
         padding: 1rem;
         margin: .5rem;
+        flex: 1;
       }
       display: flex;
-      flex: 1;
       flex-direction: column;
       border: 2px solid black;
       margin: 2rem;

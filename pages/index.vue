@@ -106,6 +106,7 @@ export default {
       justify-content: center;
       align-items: center;
       color: var(--color-border);
+      text-align: center;
 
       svg {
         font-size: xx-large;
