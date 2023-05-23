@@ -116,7 +116,7 @@ defineProps({
 
         }
         &__buttons {
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 720px) {
                 width: 100%;
                 z-index: 1;
             }
@@ -129,7 +129,7 @@ defineProps({
             &--main {
                 height: 50px;
                 padding: 1rem 2rem;
-                background-color: var(--color-background-light);  
+                background-color: var(--color-background);  
                 color:  var(--color-lightest);
                 border: var(--color-border) solid 2px;
                 border-radius: 1rem;

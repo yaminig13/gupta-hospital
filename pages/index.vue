@@ -69,43 +69,51 @@ export default {
 
   &__highlights {
     @media only screen and (max-width: 600px) {
-      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
+      margin: 1rem;
+      padding: 1rem;
     }
+    background-color: var(--color-lightest);
     display: flex;
-    // margin: 2rem;
+    margin: 4rem;
     padding: 2rem;
-    justify-content: space-between;
+    justify-content: space-around;
 
     &.company {
       background-color: var(--color-lightest);
       display: block;
+      margin: 4rem;
+      padding: 2rem;
+
+      @media only screen and (max-width: 600px) {
+        margin: 2rem 1rem;
+        padding: 1rem;
+      }
     }
 
     &--title {
       text-align: center;
       font-size: xx-large;
-      margin-top: 2rem;
     }
 
     &--wrapper {
       display: flex;
       justify-content: center;
-      
+      flex-wrap: wrap;
     }
 
     &--item {
       display: flex;
       flex-direction: column;
-      border: 2px solid black;
-      margin: 2rem;
-      padding: 2rem;
-      background-color:  var(--color-lightest);
-      height: 10rem;
-      width: 15rem;
+      // margin: 2rem;
+      padding: 1rem;
+      // background-color:  var(--color-background-light);
+      height: 9rem;
+      width: 9rem;
       justify-content: center;
       align-items: center;
-      color: var(--color-border);
+      color: var(--color-background);
       text-align: center;
 
       svg {
@@ -113,7 +121,9 @@ export default {
       }
 
       span {
+        background-color: var(--vt-c-text-dark-2);        
         margin-top: 1rem;
+        padding: .5rem;
       }
 
       &.company {
@@ -126,6 +136,7 @@ export default {
         width: 10rem;
         background-size: cover;
         background-repeat: no-repeat;
+        margin: 2rem 1rem;
       }
     }
   }
