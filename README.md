@@ -1,4 +1,6 @@
 # gupta-hospital
+Go to gupta-hospital.netlify.app/admin
+Use google credentials to login
 
 ## Build Setup
 
